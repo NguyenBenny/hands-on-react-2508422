@@ -1,31 +1,18 @@
-import React, {Component} from "react";
-
-class Welcome extends React.Component {
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return <h1>Meet the {this.props.name}</h1>;
-  }
-}
-
-const Welcome2 = (props) => {
-  return <h1>Meet the {props.name} 2</h1>
-}
+import React, { Component } from "react";
+import Welcome from "./components/Welcome";
+import Support from "./components/Support";
 
 function App() {
   return (
     <hgroup>
-      <Welcome2 name="Stars"/>
+      <Welcome name="Stars" />
       <p>
         Members of an <b>intergalactic alliance</b> paving the way for peace and
         benevolence among all species. They are known for their enthusiasm for
         science, for their love of fun, and their dedication to education.
       </p>
-      <button className="outline" onClick={() => alert("Clicked !")}>
-        Click me!
-      </button>
+      <Support/>
     </hgroup>
   );
 }
-export default App 
+export default App;
